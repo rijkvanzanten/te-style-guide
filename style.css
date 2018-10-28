@@ -205,8 +205,9 @@ pre, code { font-family: monospace; }
   width: 20em;
 }
 
-.swatches h3 {
+.swatches h4 {
   flex-basis: 100%;
+  margin-bottom: 0.4em;
 }
 
 .swatches article > div {
