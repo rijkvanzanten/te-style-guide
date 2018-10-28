@@ -258,36 +258,61 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 /* ==========================================================================
    Typography
    ========================================================================== */
-#typography table {
-  border-collapse: separate;
-  border-spacing: 0 1em;
-  font-size: var(--text-size-demo);
+#typography #text-size-samples { font-size: var(--text-size-demo); }
+
+#typography small {
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  opacity: 0.5;
 }
 
-#typography td {
-  padding-right: 2rem;
-  font-size: 1rem;
+#typography small:hover { opacity: 1; }
+
+#typography #text-size-title {
+  font-size: 4.208em;
+  font-family: "Tech Ethics";
 }
 
-#typography #text-size-h1 { font-size: 3.157em; }
-#typography #text-size-h2 { font-size: 2.369em; }
-#typography #text-size-h3 { font-size: 1.777em; }
-#typography #text-size-h4 { font-size: 1.333em; }
+#typography #text-size-h1 {
+  font-size: 3.157em;
+  font-family: "Source Code Pro";
+}
+#typography #text-size-h2 {
+  font-size: 2.369em;
+  font-family: "Source Code Pro";
+}
+#typography #text-size-h3 {
+  font-size: 1.777em;
+  font-family: "Source Code Pro";
+}
+#typography #text-size-h4 {
+  font-size: 1.333em;
+  font-family: "Source Code Pro";
+}
 
 #typography #text-size-h5 { 
   font-size: 1em;
   font-weight: 600;
+  font-family: "Source Code Pro";
 }
 
 #typography #text-size-h6 {
   font-size: 0.75em;
   text-transform: uppercase;
   font-weight: 600;
+  font-family: "Source Code Pro";
 }
 
-#typography #text-size-p { font-size: 1em; }
+#typography #text-size-p { 
+  font-size: 1em;
+  font-family: "Source Code Pro";
+}
 
-#typography #text-size-small { font-size: 0.75em; }
+#typography #text-size-small { font-
+  size: 0.75em;
+  font-family: "Source Code Pro";
+}
 
 #typography .font-sample-te {
   font-family: "Tech Ethics";
