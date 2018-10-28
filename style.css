@@ -214,10 +214,24 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
   margin-bottom: 0.4em;
 }
 
-.swatches article > div {
+.swatches article > button {
   display: block;
-  width: 5em;
-  height: 5em;
+  width: 5rem;
+  height: 5rem;
+  appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+.swatches article > button:hover {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.swatches article > button:active {
+  font-size: 0.75rem;
 }
 
 .swatches article p {
