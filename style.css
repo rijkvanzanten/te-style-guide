@@ -1,4 +1,14 @@
 /* ==========================================================================
+   Fonts
+   ========================================================================== */
+@font-face {
+  font-family: "Tech Ethics";
+  src: url("./fonts/techethics.woff2") format("woff2"),
+       url("./fonts/techethics.woff") format("woff");
+}
+
+
+/* ==========================================================================
    Variables 
    ========================================================================== */
 
@@ -272,3 +282,12 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 #typography #text-size-p { font-size: 1em; }
 
 #typography #text-size-small { font-size: 0.75em; }
+
+#typography .font-sample-te {
+  font-family: "Tech Ethics";
+  font-size: 30px;
+}
+
+#typography .font-sample-scp {
+  font-family: "Source Code Pro";
+}
