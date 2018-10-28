@@ -223,6 +223,7 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
   padding: 0;
   margin: 0;
   font-size: 0;
+  color: white;
 }
 
 .swatches article > button:hover {
