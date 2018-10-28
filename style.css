@@ -354,7 +354,7 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 }
 
 #logo-color-switcher label:active {
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 #logo-color-switcher input[value="red"] + label { background-color: var(--red); }
@@ -398,7 +398,7 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 
 #logo-samples svg {
   fill: var(--logo-fill);
-  transition: fill 200ms var(--transition);
+  transition: fill 300ms var(--transition);
 }
 
 #logo-samples .dark {
