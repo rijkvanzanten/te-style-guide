@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Variables 
+   ========================================================================== */
+
+:root {
+  --red: #EB0C4B;
+  --red-dark: #981037;
+  --red-darker: #6F2232;
+  --red-darkest: #47121D;
+
+  --orange: #FF5013;
+  --orange-dark: #C83D0D;
+  --orange-darker: #942E0A;
+  --oranger-darkest: #521906;
+
+  --yellow: #FFE40D;
+  --yellow-dark: #A6940A;
+  --yellow-darker: #6C6004;
+  --yellow-darkest: #39330A;
+
+  --green: #11C17B;
+  --green-dark: #0C8F5B;
+  --green-darker: #0A6944;
+  --green-darkest: #07482E;
+
+  --blue: #15B4FC;
+  --blue-dark: #1287BC;
+  --blue-darker: #0A5D83;
+  --blue-darkest: #003F5B;
+
+  --gray: #EAEAEA;
+  --gray-dark: #9F9F9F;
+  --gray-darker: #535353;
+  --gray-darkest: #242424;
+
+  --transition: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --transition-in: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --transition-out: cubic-bezier(0.4, 0.0, 1, 1);
+}
+
+
+/* ==========================================================================
+   Tags
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+@media (min-width: 50em) {
+  html {
+    font-size: 130%;
+  }
+}
+
+body {
+  display: flex;
+  min-height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+}
+
+body > aside {
+  flex-basis: 10em;
+  flex-shrink: 0;
+  position: relative;
+  background-color: white;
+  border-right: 1px solid var(--gray);
+}
+
+body > main {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+p {
+  max-width: 36em;
+}
+
+/* ==========================================================================
+   Global focus / selection
+   ========================================================================== */
+
+/* Don't show the focus outline on mouse-usage focus */
+:focus:not(:focus-visible) { outline: none }
+
+::selection {
+  background-color: ;
+}
+
+/* ==========================================================================
+   Navigation bar
+   ========================================================================== */
+
+#logo {
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid #E2E4E6;
+}
+
+#logo > img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+#main-nav {
+  padding: 1rem;
+  font-size: 0.84em;
+  width: 100%;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav li {
+  display: block;
+  padding: 8px 0;
+}
+
+#main-nav a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+  width: max-content;
+}
+
+#main-nav a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: 200ms var(--transition);
+}
+
+#main-nav a:hover::after {
+  transform: scaleX(1);
+}
