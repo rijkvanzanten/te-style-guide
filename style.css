@@ -48,6 +48,7 @@
   --transition-out: cubic-bezier(0.4, 0.0, 1, 1);
 
   --text-size-demo: 16px;
+  --logo-fill: #EB0C4B;
 }
 
 
@@ -126,13 +127,13 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
    Navigation bar
    ========================================================================== */
 
-#logo {
+#sidebar-logo {
   width: 100%;
   padding: 16px 0;
   border-bottom: 1px solid #E2E4E6;
 }
 
-#logo > img {
+#sidebar-logo > img {
   width: 80%;
   display: block;
   margin: 0 auto;
@@ -322,4 +323,84 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 
 #typography #font-sample-scp {
   font-family: "Source Code Pro";
+}
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+#logo-color-switcher {
+  margin-bottom: 1rem;
+}
+
+#logo-color-switcher input {
+  opacity: 0;
+  position: absolute;
+  left: -999px;
+}
+
+#logo-color-switcher label {
+  font-size: 0;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  margin-right: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: transform 180ms var(--transition);
+}
+
+#logo-color-switcher label:hover {
+  transform: scale(1.1);
+}
+
+#logo-color-switcher label:active {
+  transform: scale(0.9);
+}
+
+#logo-color-switcher input[value="red"] + label { background-color: var(--red); }
+#logo-color-switcher input[value="orange"] + label { background-color: var(--orange); }
+#logo-color-switcher input[value="yellow"] + label { background-color: var(--yellow); }
+#logo-color-switcher input[value="green"] + label { background-color: var(--green); }
+#logo-color-switcher input[value="blue"] + label { background-color: var(--blue); }
+
+#logo-color-switcher input:checked + label::after {
+  content: "✓";
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+}
+
+#logo-samples {
+  display: grid;
+  grid-template:
+    "a b"
+    "c d"
+    "e f";
+  grid-gap: 1rem;
+}
+
+#logo-samples h3:first-of-type { grid-area: a; }
+#logo-samples h3:last-of-type { grid-area: b; }
+
+#logo-samples > div {
+  padding: 1em;
+}
+
+#logo-samples .light {
+  border: 1px solid var(--gray);
+}
+
+#logo-samples svg {
+  fill: var(--logo-fill);
+  transition: fill 200ms var(--transition);
+}
+
+#logo-samples .dark {
+  background-color: black;
 }
