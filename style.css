@@ -97,6 +97,12 @@ section header {
   padding: 2em;
 }
 
+section > h2, section > h3 {
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 5px;
+  margin-top: 3rem;
+}
+
 p {
   max-width: 36em;
   line-height: 140%;
