@@ -70,6 +70,7 @@ body > aside {
   top: 0;
   position: fixed;
   left: 0;
+  height: 100%;
 }
 
 body > main { padding-left: 10em; }
