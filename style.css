@@ -314,11 +314,12 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
   font-family: "Source Code Pro";
 }
 
-#typography .font-sample-te {
+#typography #font-sample-te {
   font-family: "Tech Ethics";
   font-size: 30px;
+  margin-bottom: 3rem;
 }
 
-#typography .font-sample-scp {
+#typography #font-sample-scp {
   font-family: "Source Code Pro";
 }
