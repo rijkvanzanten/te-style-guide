@@ -328,17 +328,17 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 /* ==========================================================================
    Logo
    ========================================================================== */
-#logo-color-switcher {
+.color-switcher {
   margin-bottom: 1rem;
 }
 
-#logo-color-switcher input {
+.color-switcher input {
   opacity: 0;
   position: absolute;
   left: -999px;
 }
 
-#logo-color-switcher label {
+.color-switcher label {
   font-size: 0;
   width: 3rem;
   height: 3rem;
@@ -349,21 +349,21 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
   transition: transform 180ms var(--transition);
 }
 
-#logo-color-switcher label:hover {
+.color-switcher label:hover {
   transform: scale(1.1);
 }
 
-#logo-color-switcher label:active {
+.color-switcher label:active {
   transform: scale(1);
 }
 
-#logo-color-switcher input[value="red"] + label { background-color: var(--red); }
-#logo-color-switcher input[value="orange"] + label { background-color: var(--orange); }
-#logo-color-switcher input[value="yellow"] + label { background-color: var(--yellow); }
-#logo-color-switcher input[value="green"] + label { background-color: var(--green); }
-#logo-color-switcher input[value="blue"] + label { background-color: var(--blue); }
+.color-switcher input[value="red"] + label { background-color: var(--red); }
+.color-switcher input[value="orange"] + label { background-color: var(--orange); }
+.color-switcher input[value="yellow"] + label { background-color: var(--yellow); }
+.color-switcher input[value="green"] + label { background-color: var(--green); }
+.color-switcher input[value="blue"] + label { background-color: var(--blue); }
 
-#logo-color-switcher input:checked + label::after {
+.color-switcher input:checked + label::after {
   content: "✓";
   font-size: 1.5rem;
   position: absolute;
@@ -403,4 +403,23 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 
 #logo-samples .dark {
   background-color: black;
+}
+
+.kaomoji {
+  --color: var(--red);
+  --shadow-color: var(--yellow);
+
+  overflow: hidden;
+  padding: 1rem;
+  color: var(--color);
+  text-shadow: -4px 2px var(--shadow-color);
+  background-color: black;
+  font-family: "Hiragino Kaku Gothic Std W8", monospace;
+  font-size: 0.75rem;
+  word-break: break-all;
+  transition: all 1000ms var(--transition);
+}
+
+.transitions {
+  margin-bottom: 1rem;
 }
