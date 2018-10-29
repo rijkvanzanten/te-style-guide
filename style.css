@@ -423,3 +423,30 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 .transitions {
   margin-bottom: 1rem;
 }
+
+#usage .images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+#usage img {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  filter: blur(5px);
+  transition: filter 200ms var(--transition), transform 170ms var(--transition);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+#usage img.lazyloaded {
+  filter: blur(0);
+}
+
+#usage img:hover {
+  transform: scale(1.1);
+  z-index: 2;
+  position: relative;
+}
