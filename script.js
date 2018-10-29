@@ -79,6 +79,15 @@ logoColorInputs.forEach(function(button) {
 
 document.querySelectorAll('.images img').forEach(function(img, i) {
   img.addEventListener('click', function(event) {
-    
+    var image = document.querySelector('.lightbox img:nth-child(' + (i + 1) + ')');
+    image.classList.add('active');
+    document.body.classList.add('overlay');
   });
-})
+});
+
+document.querySelectorAll('.lightbox img').forEach(function(img) {
+  img.addEventListener('click', function(event) {
+    event.target.classList.remove('active');
+    document.body.classList.remove('overlay');
+  });
+});
