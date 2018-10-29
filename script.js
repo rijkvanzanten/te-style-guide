@@ -73,3 +73,12 @@ logoColorInputs.forEach(function(button) {
     b.reveal(1000);
   });
 });
+
+
+// Dynamically open the lightbox images
+
+document.querySelectorAll('.images img').forEach(function(img, i) {
+  img.addEventListener('click', function(event) {
+    
+  });
+})

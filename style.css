@@ -98,6 +98,10 @@ section header {
   padding: 2em;
 }
 
+img {
+  max-width: 100%;
+}
+
 section > h2, section > h3 {
   border-bottom: 1px solid var(--gray);
   padding-bottom: 5px;
@@ -425,28 +429,53 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
 }
 
 #usage .images {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 1rem;
+  display: grid;
+  grid-template:
+    "a a a a b b"
+    "a a a a c c"
+    "a a a a d d"
+    "e e f f f f"
+    "e e g g g g"
+    "h h h h i i"
+    "h h h h i i"
+    "j j j k k k"
+    "j j j k k k";
+  max-width: 700px;
+  grid-gap: 1rem;
+  grid-template-columns: 35% 5% 10% 12% 18% 20%;
+  grid-template-rows: 280px 280px 280px 180px 260px 280px 280px 140px 140px; /* 2120 */
 }
 
 #usage img {
-  width: 10em;
-  height: 10em;
   object-fit: cover;
+  overflow: hidden;
   filter: blur(5px);
-  transition: filter 200ms var(--transition), transform 170ms var(--transition);
+  transition:
+    filter 500ms,
+    transform 170ms var(--transition);
   cursor: pointer;
   margin-bottom: 2rem;
+  width: 100%;
+  height: 100%;
 }
 
 #usage img.lazyloaded {
   filter: blur(0);
 }
 
-#usage img:hover {
-  transform: scale(1.1);
-  z-index: 2;
-  position: relative;
+#usage img:nth-child(1) { grid-area: a; }
+#usage img:nth-child(2) { grid-area: b; }
+#usage img:nth-child(3) { grid-area: c; }
+#usage img:nth-child(4) { grid-area: d; }
+#usage img:nth-child(5) { grid-area: e; }
+#usage img:nth-child(6) { grid-area: f; }
+#usage img:nth-child(7) { grid-area: g; }
+#usage img:nth-child(8) { grid-area: h; }
+#usage img:nth-child(9) { grid-area: i; }
+#usage img:nth-child(10) { grid-area: j; }
+#usage img:nth-child(11) { grid-area: k; }
+
+#usage .lightbox img {
+  position: fixed;
+  display: none;
 }
