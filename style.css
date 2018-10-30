@@ -464,7 +464,7 @@ pre, code { font-family: "Dank Mono", "Source Code Pro", "Roboto Mono", "SF Mono
   filter: blur(0);
 }
 
-#usage img:hover {
+#usage .images img:hover {
   transform: scale(1.03);
 }
 
